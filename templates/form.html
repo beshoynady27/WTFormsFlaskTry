@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %} register {% endblock %}
+
+{% block body %}
+    {% if email %}
+        <h1>hi {{email}}</h1>
+    {% else %}
+        <form  method="post">
+            {{form.hidden_tag()}}
+            {{form.name.label}}
+            {{form.name}}
+
+            {{form.gender.label}}
+            {{form.gender}}
+
+            {{form.speciality.label}}
+            {{form.speciality}}
+
+            {{form.email.label}}
+            {{form.email}}
+
+            {{form.password.label}}
+            {{form.password}}
+
+            {{form.submit}}
+        </form>
+        {{testList[0]}}
+    {% endif %}
+{% endblock %}
